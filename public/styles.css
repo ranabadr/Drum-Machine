@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+html {
+    overflow: hidden;
+}
+
+#root {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(45deg, #0b277b, #4a6eaa, #58a4e1);
+}
+
+#drum-machine {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    height: 50%;
+    background-color: rgba(224, 169, 93, 0.65);
+    border-radius: 3px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+}
+
+input[type=range] {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+.keyboard {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+    grid-template-columns: repeat(3, 90px);
+    gap: 20px;
+}
+
+.keyboard button {
+    height: 2.5em;
+    width: 3em;
+    font-size: 2rem;
+}
+
+.keyboard button:active {
+    background-color: #4a6eaa;
+    transition: background-color 0.75s;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+
+.controls * {
+    width: 80%;
+}
+
+.controls button {
+    height: 2em;
+    font-size: 1.75rem;
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 988px) {
+    .keyboard {
+        gap: 10px;
+    }
+
+    .keyboard button {
+        height: 1.5em;
+        width: 2em;
+        font-size: 2rem;
+    }
+
+    .controls button {
+        height: 1.75em;
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 845px) {
+    #drum-machine {
+        width: 70%;
+    }
+
+    .keyboard {
+        gap: 10px 0;
+    }
+
+    .controls button:last-child {
+        font-size: 1.2rem;
+        height: 2em;
+    }
+}
